@@ -2,6 +2,10 @@ var app = new Vue({
     el: "#app",
     data : {
         title: "Contas a pagar",
+        menus: [
+            {id: 0, name: "Listar contas"},
+            {id: 1, name: "Criar contas",}
+        ],
         bills: [
             { date_due: "20/08/2016", name: "Conta de Luz", value: 70.99, done: 1 },
             { date_due: "21/08/2016", name: "Conta de Água", value: 50.99, done: 0 },
@@ -21,6 +25,11 @@ var app = new Vue({
                 }
             }
             return !count ? "Nenhuma conta a pagar" : "Exixtem " + count + " a serem pagas";
+        }
+    },
+    methods : {
+        showView : function (number) {
+            console.log(number);
         }
     }
 });

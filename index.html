@@ -6,6 +6,13 @@
 
 <h1>{{ title }}</h1>
 <h3>{{ status }}</h3>
+<nav>
+    <ul>
+        <li v-for="o in menus">
+            <a href="javascript:" v-on:click="showView(o.id)">{{ o.name }}</a>
+        </li>
+    </ul>
+</nav>
 <table border="1px" cellpadding="10px">
     <thead>
         <tr>
