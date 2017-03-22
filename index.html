@@ -37,7 +37,7 @@
 </div>
 <div v-else>
     <form name="form">
-        Test: <input type="text">
+        Test: <input type="text" v-model="test">{{ test }}
     </form>
 </div>
 <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>

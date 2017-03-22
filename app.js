@@ -7,6 +7,7 @@ var app = new Vue({
             {id: 1, name: "Criar contas",}
         ],
         activedView: 0,
+        test: '',
         bills: [
             { date_due: "20/08/2016", name: "Conta de Luz", value: 70.99, done: 1 },
             { date_due: "21/08/2016", name: "Conta de Água", value: 50.99, done: 0 },
@@ -33,5 +34,9 @@ var app = new Vue({
             this.activedView = id;
         }
     }
+});
+
+app.$watch('test', function (novoValor, velhoValor){
+   console.log("velhoValor: " + velhoValor + " - novoValor: " + novoValor);
 });
 
